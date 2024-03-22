@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hiring Form</title>
+  <style>
+    /* General form styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Labels */
+    label {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    /* Input fields */
+    input[type="text"],
+    input[type="number"],
+    input[type="file"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    input[type="file"] {
+      cursor: pointer;
+    }
+
+    /* Help text */
+    .help-block {
+      color: #999;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    /* Submit button */
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <form role="form" name="newHiringDetailSubmition" class="form-horizontal">
+
+      <label for="resumeDocumentUpload">Upload your Resume</label>
+      <input type="file" id="resumeDocumentUpload" cam-variable-name="resumeDocumentUpload"
+        cam-variable-type="File" cam-max-filesize="10000000" />
+
+      <label for="candidate_name">Candidate Name</label>
+      <input cam-variable-name="candidate_name" cam-variable-type="String" id="candidate_name"
+        name="candidate_name" type="text" placeholder="Enter candidate name" required />
+
+      <label for="number_year_of_experience">Experience (in Year)</label>
+      <input cam-variable-name="number_year_of_experience" cam-variable-type="Integer"
+        id="number_year_of_experience" name="number_year_of_experience" type="number"
+        placeholder="Enter experience (0 to 60 years)" min="0" max="60" required />
+
+    </form>
+  </div>
+
+</body>
+</html>

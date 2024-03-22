@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresher Result Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .shining-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .shining-text h3 {
+        font-size: 24px;
+        position: relative;
+        display: inline-block;
+        background: linear-gradient(45deg, #ff5733, #ffcd3c, #34e89e, #0be881);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 4s linear infinite;
+    }
+
+    @keyframes shine {
+        0% { background-position: -500%; }
+        100% { background-position: 500%; }
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #666;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .form-group {
+        animation: slideIn 0.5s ease forwards;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="shining-text">
+        <h3>Fresher Result Form</h3>
+    </div>
+    <form role="form" name="fresherResultForm" class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label" for="aptitude_result">Aptitude Result (Out Of 10)</label>
+            <input cam-variable-name="aptitude_result" cam-variable-type="Integer" id="aptitude_result"
+                name="aptitude_result" class="form-control" type="number" min="0" max="10" required
+                placeholder="Please Provide the Aptitude Result" style="border-color: #ff5733;" />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="communication_result">Communication Result (Out Of 10)</label>
+            <input cam-variable-name="communication_result" cam-variable-type="Integer" id="communication_result"
+                name="communication_result" class="form-control" type="number" min="0" max="10" required
+                placeholder="Please Provide the Communication Result" style="border-color: #3498db;" />
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

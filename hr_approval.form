@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Approved",
+          "value": "1"
+        },
+        {
+          "label": "Rejected",
+          "value": "0"
+        }
+      ],
+      "label": "Document Verification",
+      "type": "select",
+      "id": "select_approval",
+      "key": "select_approval",
+      "defaultValue": "1",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "hr_approval",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 15
+}
